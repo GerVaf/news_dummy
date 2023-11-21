@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;  
+@tailwind utilities;
+
+/* NavMenu */
+.navMenu {
+  @apply py-2 px-3 border border-slate-100;
+}

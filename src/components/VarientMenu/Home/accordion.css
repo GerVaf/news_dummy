@@ -1,0 +1,8 @@
+.mantine-Accordion-control {
+  border:1px solid #fff !important;
+  color: white !important;
+}
+
+.mantine-Accordion-control:hover{
+  background-color: black;
+}
