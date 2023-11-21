@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Path from "./routes/Path";
+import Navbar2 from "./components/Navbar2";
 
 const App = () => {
   return (
     <div className="bg-[#0f0f0f]">
       <Navbar />
+      <Navbar2/>
       <div className="max-w-[1300px] mx-auto">
         <Path />
       </div>

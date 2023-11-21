@@ -20,7 +20,7 @@ const News = () => {
           {/* News */}
           <div
             onClick={handleShow}
-            className="flex justify-center items-center gap-2 py-3 border-b border-slate-300"
+            className="flex justify-center items-center gap-2 py-3 "
           >
             <p>News</p>
             <div>
@@ -34,14 +34,14 @@ const News = () => {
           {/* Music */}
           <p
             onClick={() => nav("/music")}
-            className="py-3 border-b border-slate-300 bg-slate-100 text-black  text-center"
+            className="py-3   text-white  text-center"
           >
             Music
           </p>
           {/* Sport */}
           <p
             onClick={() => nav("/sports")}
-            className="py-3 border-b border-slate-300 bg-slate-100  text-black text-center"
+            className="py-3    text-white text-center"
           >
             Sport
           </p>
