@@ -5,7 +5,7 @@ const Trending = () => {
   return (
     <div className="grid grid-cols-12 gap-5 my-20">
       {/* Left */}
-      <div className="col-span-12 xl:col-span-6 xl:h-full text-white  flex flex-col gap-5">
+      <div className="col-span-12 xl:col-span-6 xl:h-full text-black  flex flex-col gap-5">
         <h1 className="text-6xl font-bold">Music Focused</h1>
         <p className="text-xl">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem

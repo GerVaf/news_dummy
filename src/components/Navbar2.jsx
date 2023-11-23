@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar2 = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -20,56 +21,72 @@ const Navbar2 = () => {
 
   const navbarVariants = {
     scrolled: { y: "-100%" },
-    notScrolled: { backgroundColor: "transparent", color: "white" },
+    notScrolled: { backgroundColor: "transparent", color: "black" },
   };
 
   const navData = [
     {
-      id: 1,
-      title: "Merch",
-      addition: [
-        { id: 1, title: "addition" },
-        { id: 2, title: "addtion" },
-        { id: 3, title: "additon" },
-      ],
-    },
-    {
-      id: 2,
-      title: "Music",
-      addition: [
-        { id: 1, title: "addition" },
-        { id: 2, title: "addtion" },
-        { id: 3, title: "additon" },
-      ],
-    },
-    { id: 3, title: "Artists" },
-    {
-      id: 5,
-      title: "Collections",
-      addition: [
-        { id: 1, title: "addition" },
-        { id: 2, title: "addtion" },
-        { id: 3, title: "additon" },
-      ],
-    },
-    {
-      id: 6,
-      title: "Collaborations",
-      addition: [
-        { id: 1, title: "addition" },
-        { id: 2, title: "addtion" },
-        { id: 3, title: "additon" },
-      ],
-    },
-    { id: 7, title: "Interscope Vinyl Collective" },
-    { id: 8, title: "24 GRAMMY® Nominees" },
+      id:1,
+      title:'News',
+      addition:[
+        {
+          id:1,
+          title:'Music',
+          link:'music'
+        },
+        {
+          id:2,
+          title:'Sport',
+          link:'sports'
+        }
+      ]
+    }
+    // {
+    //   id: 1,
+    //   title: "Merch",
+    //   addition: [
+    //     { id: 1, title: "addition" },
+    //     { id: 2, title: "addtion" },
+    //     { id: 3, title: "additon" },
+    //   ],
+    // },
+    // {
+    //   id: 2,
+    //   title: "Music",
+    //   addition: [
+    //     { id: 1, title: "addition" },
+    //     { id: 2, title: "addtion" },
+    //     { id: 3, title: "additon" },
+    //   ],
+    // },
+    // { id: 3, title: "Artists" },
+    // {
+    //   id: 5,
+    //   title: "Collections",
+    //   addition: [
+    //     { id: 1, title: "addition" },
+    //     { id: 2, title: "addtion" },
+    //     { id: 3, title: "additon" },
+    //   ],
+    // },
+    // {
+    //   id: 6,
+    //   title: "Collaborations",
+    //   addition: [
+    //     { id: 1, title: "addition" },
+    //     { id: 2, title: "addtion" },
+    //     { id: 3, title: "additon" },
+    //   ],
+    // },
+    // { id: 7, title: "Interscope Vinyl Collective" },
+    // { id: 8, title: "24 GRAMMY® Nominees" },
   ];
 
   return (
     <motion.div
       variants={navbarVariants}
       animate={isScrolled ? "scrolled" : "notScrolled"}
-      className="sticky top-10 z-10 text-white"
+      className="sticky top-10 z-10 text-black"
     >
       <div className="flex gap-2 items-center p-5 justify-center">
         {navData.map((el) => {
@@ -105,7 +122,7 @@ const Navbar2 = () => {
                       className="hover:text-red-500 transition duration-150"
                       key={child.id}
                     >
-                      {child.title}
+                      <Link to={child.link}>{child.title}</Link>
                     </motion.p>
                   ))}
                 </motion.div>

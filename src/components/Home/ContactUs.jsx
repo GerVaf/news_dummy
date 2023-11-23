@@ -10,7 +10,7 @@ const ContactUs = () => {
         {/* Left */}
         <div className="col-span-12 lg:col-span-6 ">
           {/* Contact Form */}
-          <h1 className="text-5xl font-bold uppercase text-white mb-5">
+          <h1 className="text-5xl font-bold uppercase text-black mb-5">
             Contact Us
           </h1>
           <div className="p-5 flex flex-col gap-3 border border-slate-50/20 rounded-md">
@@ -34,7 +34,7 @@ const ContactUs = () => {
             </button>
           </div>
           {/* Address */}
-          <div className="mt-5 flex flex-col gap-2 text-white">
+          <div className="mt-5 flex flex-col gap-2 text-black">
             <div className="grid grid-cols-6 ">
               <h1 className="col-span-1 uppercase">Address</h1>
               <p className="col-span-6 md:col-span-5">
@@ -50,7 +50,7 @@ const ContactUs = () => {
           
         </div>
         {/* Right */}
-        <div className="col-span-12 lg:col-span-6 flex flex-col gap-3 text-white">
+        <div className="col-span-12 lg:col-span-6 flex flex-col gap-3 text-black">
           {/* Image */}
           <div className="bg-white/50 h-[500px]">
             {/* <img src={lottie} alt="" className="w-full"/> */}
@@ -62,7 +62,7 @@ const ContactUs = () => {
           </p>
           <h1 className="uppercase text-3xl">Opaque industries ltd.</h1>
           <div className="flex items-center gap-3">
-            <button className="px-5 py-2 text-white border border-slate-50">
+            <button className="px-5 py-2 text-black border border-slate-50">
                 Learn More
             </button>
             <h1 className="uppercase text-3xl">Our Story</h1>

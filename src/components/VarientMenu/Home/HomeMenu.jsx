@@ -43,10 +43,14 @@ const HomeMenu = ({ opened, close }) => {
         },
         close: {
           color: "white",
+          '&:active':{
+            color:'black'
+          }
         },
         content: {
           background: "#000",
         },
+        
       }}
     >
       {/* Drawer content */}

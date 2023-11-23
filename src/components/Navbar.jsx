@@ -4,23 +4,24 @@ import HomeMenu from "./VarientMenu/Home/HomeMenu";
 import SportMenu from "./VarientMenu/SportMenu";
 import { useDisclosure } from "@mantine/hooks";
 import MusicMenu from "./VarientMenu/MusicMenu";
-
+import logo from '../../public/logo.svg'
 const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
   const [opened, { open, close }] = useDisclosure(false);
   return (
     <div className="z-50 sticky top-0">
-      <div className="bg-slate-200 py-3 px-3 xl:px-0">
+      <div className="bg-slate-900 text-white py-3 px-3 xl:px-0">
         <nav className="max-w-[1300px] mx-auto flex justify-between items-center">
           {/* Home */}
           <NavLink to={"/"}>
             Home
           </NavLink>
           {/* News */}
-          <NavLink to={"/news"}>
+          {/* <NavLink to={"/news"}>
             News
-          </NavLink>
+          </NavLink> */}
+          <img src={logo} alt="" className="h-10"/>
           {/* Menu */}
           <h1 onClick={open} className="cursor-pointer">
             Menu

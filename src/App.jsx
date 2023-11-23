@@ -5,7 +5,7 @@ import Navbar2 from "./components/Navbar2";
 
 const App = () => {
   return (
-    <div className="bg-[#0f0f0f]">
+    <div className="bg-slate-200">
       <Navbar />
       <Navbar2/>
       <div className="max-w-[1300px] mx-auto">
