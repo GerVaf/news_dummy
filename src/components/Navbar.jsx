@@ -4,7 +4,7 @@ import HomeMenu from "./VarientMenu/Home/HomeMenu";
 import SportMenu from "./VarientMenu/SportMenu";
 import { useDisclosure } from "@mantine/hooks";
 import MusicMenu from "./VarientMenu/MusicMenu";
-import logo from '../../public/logo.svg'
+import logo from "../../public/logo.svg";
 const Navbar = () => {
   const location = useLocation();
   const path = location.pathname;
@@ -13,15 +13,9 @@ const Navbar = () => {
     <div className="z-50 sticky top-0">
       <div className="bg-slate-900 text-white py-3 px-3 xl:px-0">
         <nav className="max-w-[1300px] mx-auto flex justify-between items-center">
+          <img src={logo} alt="" className="h-5 lg:h-10" />
           {/* Home */}
-          <NavLink to={"/"}>
-            Home
-          </NavLink>
-          {/* News */}
-          {/* <NavLink to={"/news"}>
-            News
-          </NavLink> */}
-          <img src={logo} alt="" className="h-10"/>
+          <NavLink to={"/"} className='mr-14 md:mr-32'>Home</NavLink>
           {/* Menu */}
           <h1 onClick={open} className="cursor-pointer">
             Menu
@@ -30,13 +24,13 @@ const Navbar = () => {
       </div>
 
       {path === "/" ? (
-        <HomeMenu opened={opened} close={close}/>
+        <HomeMenu opened={opened} close={close} />
       ) : path === "/music" ? (
-        <MusicMenu opened={opened} close={close}/>
+        <MusicMenu opened={opened} close={close} />
       ) : path === "/sports" ? (
-        <SportMenu opened={opened} close={close}/>
+        <SportMenu opened={opened} close={close} />
       ) : (
-        path === "/business" && <HomeMenu opened={opened} close={close}/>
+        path === "/business" && <HomeMenu opened={opened} close={close} />
       )}
     </div>
   );

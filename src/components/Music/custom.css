@@ -1,0 +1,14 @@
+.splide__arrows {
+  width: 150px;
+  margin-top: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.splide__arrow {
+  background-color: transparent;
+  opacity: 1;
+}
+.splide__arrow svg {
+  fill: white;
+}

@@ -7,10 +7,8 @@ const App = () => {
   return (
     <div className="bg-slate-200">
       <Navbar />
-      <Navbar2/>
-      <div className="max-w-[1300px] mx-auto">
-        <Path />
-      </div>
+      <Navbar2 />
+      <Path />
     </div>
   );
 };

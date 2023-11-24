@@ -21,7 +21,7 @@ const Navbar2 = () => {
 
   const navbarVariants = {
     scrolled: { y: "-100%" },
-    notScrolled: { backgroundColor: "transparent", color: "black" },
+    // notScrolled: { backgroundColor: "transparent", color: "black" },
   };
 
   const navData = [
@@ -38,6 +38,11 @@ const Navbar2 = () => {
           id:2,
           title:'Sport',
           link:'sports'
+        },
+        {
+          id:3,
+          title:'Business',
+          link:'business'
         }
       ]
     }
