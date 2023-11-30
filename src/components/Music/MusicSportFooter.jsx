@@ -1,6 +1,7 @@
 import React from "react";
 import music from "/musicWhite.svg";
 import sport from "/sportWhite.svg";
+import { Link } from "react-router-dom";
 const MusicSportFooter = ({cate}) => {
   return (
     <div className="bg-slate-900">
@@ -33,7 +34,7 @@ const MusicSportFooter = ({cate}) => {
           {/* Services and Link */}
           <div className="flex flex-col gap-2 uppercase">
             <h1>Services</h1>
-            <h1>Advertise with us</h1>
+            <Link to={'/advertiseWithUs'}>Advertise with us</Link>
             <hr />
             <h1>INDX for MUSIC</h1>
             <h1>INDX for SPORTS</h1>

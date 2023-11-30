@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import HomeMenu from "./VarientMenu/Home/HomeMenu";
 import SportMenu from "./VarientMenu/SportMenu";
 import { useDisclosure } from "@mantine/hooks";
 import MusicMenu from "./VarientMenu/MusicMenu";
 import logo from "../../public/logo.svg";
 const Navbar = () => {
+  const nav = useNavigate()
   const location = useLocation();
   const path = location.pathname;
   const [opened, { open, close }] = useDisclosure(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
           <h1 onClick={open} className="cursor-pointer">
             Menu
           </h1>
+          
         </nav>
       </div>
 

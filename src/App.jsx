@@ -5,9 +5,8 @@ import Navbar2 from "./components/Navbar2";
 
 const App = () => {
   return (
-    <div className="bg-slate-200">
+    <div className="bg-slate-200 font-sans">
       <Navbar />
-      <Navbar2 />
       <Path />
     </div>
   );

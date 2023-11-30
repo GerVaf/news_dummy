@@ -9,7 +9,7 @@ const Navbar2 = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      setIsScrolled(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -43,50 +43,15 @@ const Navbar2 = () => {
           id:3,
           title:'Business',
           link:'business'
+        },
+        {
+          id:4,
+          title:'Detail',
+          link:'/detail'
         }
       ]
     }
-    // {
-    //   id: 1,
-    //   title: "Merch",
-    //   addition: [
-    //     { id: 1, title: "addition" },
-    //     { id: 2, title: "addtion" },
-    //     { id: 3, title: "additon" },
-    //   ],
-    // },
-    // {
-    //   id: 2,
-    //   title: "Music",
-    //   addition: [
-    //     { id: 1, title: "addition" },
-    //     { id: 2, title: "addtion" },
-    //     { id: 3, title: "additon" },
-    //   ],
-    // },
-    // { id: 3, title: "Artists" },
-    // {
-    //   id: 5,
-    //   title: "Collections",
-    //   addition: [
-    //     { id: 1, title: "addition" },
-    //     { id: 2, title: "addtion" },
-    //     { id: 3, title: "additon" },
-    //   ],
-    // },
-    // {
-    //   id: 6,
-    //   title: "Collaborations",
-    //   addition: [
-    //     { id: 1, title: "addition" },
-    //     { id: 2, title: "addtion" },
-    //     { id: 3, title: "additon" },
-    //   ],
-    // },
-    // { id: 7, title: "Interscope Vinyl Collective" },
-    // { id: 8, title: "24 GRAMMY® Nominees" },
-  ];
-
+  ]
   return (
     <motion.div
       variants={navbarVariants}
@@ -118,9 +83,6 @@ const Navbar2 = () => {
                   className="absolute top-full left-0 px-5 py-2 flex flex-col bg-white shadow-md gap-2"
                   variants={navbarVariants}
                   animate={isScrolled ? "scrolled" : "notScrolled"}
-                  // initial={{ opacity: 0, y: -10 }}
-                  // animate={{ opacity: 1, y: 0 }}
-                  // exit={{ opacity: 0, y: -10 }}
                 >
                   {el.addition.map((child) => (
                     <motion.p

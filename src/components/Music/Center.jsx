@@ -50,7 +50,7 @@ const Center = () => {
             />
           </SplideSlide>
         </SplideTrack>
-        <div className="splide__arrows">
+        <div className="splide__arrows custom-arrows">
           <button className="splide__arrow splide__arrow--prev">
             <FaArrowCircleRight className="text-2xl" />
           </button>
