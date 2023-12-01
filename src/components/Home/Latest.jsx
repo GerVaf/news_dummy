@@ -3,11 +3,11 @@ import React from "react";
 import "@splidejs/react-splide/css";
 const Latest = () => {
   return (
-    <div className="grid grid-cols-12 gap-5 my-20">
+    <div className="grid grid-cols-12 gap-5">
       {/* Left */}
       <div className="col-span-12 xl:col-span-6 xl:h-full text-black  flex flex-col gap-5">
-        <h1 className="text-6xl font-bold">Sport Focused</h1>
-        <p className="text-xl">
+        <h1 className="text-4xl font-bold">Sport Focused</h1>
+        <p className="">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
           tempora, quas sapiente tempore ipsa quae veritatis debitis at!
           Repudiandae quisquam modi vel, dolores atque illum aliquid ut

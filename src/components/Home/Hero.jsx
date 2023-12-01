@@ -2,7 +2,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
 const Hero = () => {
   return (
-    <div className=" lg:h-screen xl:h-full xl:pb-24 flex justify-center items-center">
+    <div className=" lg:h-screen xl:h-full xl:pb-20 flex justify-center items-center">
       <div className="grid grid-cols-12 items-center gap-5 pt-10 lg:pt-12 px-3 max-w-[1300px] mx-auto">
         {/* Left */}
         <div className="col-span-12 lg:col-span-6 flex flex-col gap-10 text-black">
