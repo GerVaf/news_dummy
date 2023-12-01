@@ -2,7 +2,7 @@ import React from "react";
 
 const FeaturedNews = () => {
   return (
-    <div className="bg-slate-900 text-white relative rounded-none lg:rounded-r">
+    <div className="bg-bgColor text-white relative rounded-none lg:rounded-r">
       {/* Heading */}
       <h1 className="font-bold text-2xl border-b border-slate-200 p-3 uppercase">Featured News</h1>
       {/* News */}

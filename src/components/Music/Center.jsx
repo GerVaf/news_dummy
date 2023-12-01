@@ -9,7 +9,7 @@ import "./custom.css";
 const Center = () => {
   const [show, setShow] = useState(false);
   return (
-    <div className="bg-slate-900 rounded text-white p-5 flex flex-col items-start gap-5">
+    <div className="bg-bgColor rounded text-white p-5 flex flex-col items-start gap-5">
       {/* Top */}
       <div className={`overflow-hidden transition-all border-b ${show ? 'h-[60px]' : 'h-[30px] '}`}>
         {/* DropDown */}
@@ -32,21 +32,21 @@ const Center = () => {
           gap: 10,
         }}
         aria-label="My Favorite Images"
-        className="h-[500px] mb-8"
+        className="h-[350px] lg:h-[500px] mb-8"
       >
         <SplideTrack>
-          <SplideSlide className="h-[500px]">
+          <SplideSlide className="h-[350px] lg:h-[500px]">
             <img
               src="https://plus.unsplash.com/premium_photo-1700170363213-add0962221c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8"
               alt="Image 1"
-              className="h-[500px] aspect-video"
+              className="h-[350px] lg:h-[500px] aspect-video"
             />
           </SplideSlide>
-          <SplideSlide className="h-[500px]">
+          <SplideSlide className="h-[350px] lg:h-[500px]">
             <img
               src="https://images.unsplash.com/photo-1682695795557-17447f921f79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"
               alt="Image 2"
-              className="h-[500px] aspect-video"
+              className="h-[350px] lg:h-[500px] aspect-video"
             />
           </SplideSlide>
         </SplideTrack>

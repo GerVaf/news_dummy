@@ -4,7 +4,7 @@ import sport from "/sportWhite.svg";
 import { Link } from "react-router-dom";
 const MusicSportFooter = ({cate}) => {
   return (
-    <div className="bg-slate-900">
+    <div className="bg-bgColor">
       <div className="flex flex-col gap-5 lg:flex-row justify-between p-10">
         {/* logo */}
         <img src={cate === 'music' ? music : sport} alt="" className="h-20" />

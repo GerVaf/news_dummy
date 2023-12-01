@@ -32,12 +32,12 @@ const Navbar2 = () => {
         {
           id:1,
           title:'Music',
-          link:'music'
+          link:'/music'
         },
         {
           id:2,
           title:'Sport',
-          link:'sports'
+          link:'/sports'
         },
         {
           id:3,
