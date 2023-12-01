@@ -42,7 +42,7 @@ const Navbar2 = () => {
         {
           id:3,
           title:'Business',
-          link:'business'
+          link:'/business'
         },
         {
           id:4,
@@ -56,7 +56,7 @@ const Navbar2 = () => {
     <motion.div
       variants={navbarVariants}
       animate={isScrolled ? "scrolled" : "notScrolled"}
-      className="sticky top-10 z-10 text-black"
+      className="sticky top-10 z-10 text-orange-600"
     >
       <div className="flex gap-2 items-center p-5 justify-center">
         {navData.map((el) => {
@@ -80,7 +80,7 @@ const Navbar2 = () => {
               {/* child dropdown */}
               {openDropdown === el.id && el?.addition && (
                 <motion.div
-                  className="absolute top-full left-0 px-5 py-2 flex flex-col bg-white shadow-md gap-2"
+                  className="absolute top-full left-0 px-5 py-2 flex flex-col bg-black shadow-md gap-2"
                   variants={navbarVariants}
                   animate={isScrolled ? "scrolled" : "notScrolled"}
                 >

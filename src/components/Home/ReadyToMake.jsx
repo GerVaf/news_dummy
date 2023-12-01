@@ -8,7 +8,7 @@ const ReadyToMake = () => {
       {/* Ready To make Part*/}
       <div className="grid grid-cols-12 gap-5 h-full lg:h-[450px] mb-8">
         {/* Big Bold Text */}
-        <h1 className="col-span-12 lg:col-span-6 text-7xl font-bold text-black lg:self-end">
+        <h1 className="col-span-12 lg:col-span-6 text-7xl font-bold text-white lg:self-end">
           Ready To make some noise?
         </h1>
         {/* GIF */}

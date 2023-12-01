@@ -3,9 +3,13 @@ import { FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
 const Hero = () => {
   return (
     <div className=" lg:h-screen xl:h-full xl:pb-20 flex justify-center items-center">
-      <div className="grid grid-cols-12 items-center gap-5 pt-10 lg:pt-12 px-3 max-w-[1300px] mx-auto">
-        {/* Left */}
-        <div className="col-span-12 lg:col-span-6 flex flex-col gap-10 text-black">
+      <img
+        src="https://images.unsplash.com/photo-1682687220015-186f63b8850a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
+        alt="blog main image"
+        className="w-full h-full rounded-md"
+      />
+      {/* <div className="grid grid-cols-12 items-center gap-5 pt-10 lg:pt-12 px-3 max-w-[1300px] mx-auto">
+        <div className="col-span-12 lg:col-span-6 flex flex-col gap-10 text-white">
           <div className="flex flex-col gap-2">
             <h1 className="font-bold text-3xl ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
@@ -23,7 +27,6 @@ const Hero = () => {
             <FaSquareXTwitter />
           </div>
         </div>
-        {/* Right */}
         <div className="col-span-12 lg:col-span-6">
           <img
             src="https://images.unsplash.com/photo-1682687220015-186f63b8850a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80"
@@ -31,8 +34,7 @@ const Hero = () => {
             className="w-full h-full rounded-md my-5"
           />
         </div>
-      </div>
-      ;
+      </div> */}
     </div>
   );
 };

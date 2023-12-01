@@ -1,30 +1,123 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import HtmlParser from "react-html-parser";
+import { useEffect } from "react";
 
 const Detail = () => {
+  const detail = useSelector((state) => state?.blog?.detail_blog);
+
+  useEffect(() => {
+    console.log(detail);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
-    <div className=" max-w-[1300px] mx-auto">
-      {/* Top Part */}
-      <div className="flex flex-col items-center gap-5 p-5">
-        <div className=" max-w-[900px] rounded-md aspect-video overflow-hidden">
+    <div className="bg-bgColor py-10">
+      {/* Main Image,Title,Author,Date,Program */}
+      <div className="max-w-[1800px] mx-auto flex flex-col items-center gap-5 p-5">
+        <div className="h-[350px] lg:h-[500px] rounded-md aspect-square lg:aspect-auto overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1701017655822-d4f7a0569b40?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={detail?.images?.url}
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-2xl font-bold text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-          veritatis illum voluptas a expedita deserunt dignissimos vel. Non
-          sapiente aliquid accusantium voluptate eum numquam, perspiciatis cum,
-          laborum tenetur quo ratione?
-        </h1>
+        <div className="text-white w-[90%] lg:w-[80%] lg:text-center">
+          <h1 className="font-bold text-xl md:text-2xl lg:text-4xl ">
+            {detail?.title}
+          </h1>
+          <h2 className="font-semibold text-slate-300 italic my-3">
+            {detail?.author}
+          </h2>
+          <p>
+            {detail?.date}
+            {detail?.programs?.length > 0 &&
+              `/ ${detail?.programs?.join(", ")}`}
+          </p>
+        </div>
+        {/* Left */}
       </div>
       {/* Description */}
-      <div className="bg-slate-950 text-slate-100 p-10 rounded-md">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi officiis at iure eligendi cum quibusdam dolore, consequatur reiciendis? Consequatur officiis rerum eum ex! Praesentium, aliquid molestias. Mollitia placeat voluptatibus debitis magni dolore, impedit enim accusamus non nihil animi error asperiores reprehenderit doloribus reiciendis eos iure fugit. Velit voluptate repudiandae animi dolores minus nobis consequuntur ab beatae, perferendis error commodi eius eos tenetur totam, voluptatibus, necessitatibus magnam vero ex ducimus quam! Vero, dolorem reprehenderit. Ut libero ipsum fugit dolor inventore fugiat suscipit, facilis fuga distinctio laborum illo maxime mollitia natus nemo? Quia ab enim fuga nesciunt omnis consequatur atque expedita, rerum excepturi sint harum totam labore tempora doloribus dolore quaerat asperiores saepe dolores officiis incidunt hic pariatur. Exercitationem reiciendis odit accusamus quia quasi, odio ullam vitae optio numquam. Similique et facere hic optio, consequuntur nulla nostrum tenetur perspiciatis harum? Illo fuga excepturi culpa quidem! Commodi deleniti ut, ad id reiciendis magni expedita vel, quisquam facere consequatur reprehenderit laborum exercitationem ipsam rerum voluptatum delectus dolores eaque in alias cupiditate. Nulla, dolorum praesentium veniam aliquam placeat ipsa saepe aspernatur sed beatae minima voluptate magnam incidunt soluta quis facilis. Repudiandae, eligendi ipsum incidunt nulla atque aut beatae rerum explicabo, ipsa ea autem! Esse excepturi quisquam vel sint enim, sit itaque incidunt, accusamus, ratione consequuntur unde quos non fuga dolores nobis aut ipsum asperiores perspiciatis nisi consequatur voluptatem veniam alias ullam! Soluta quisquam expedita adipisci odit provident nostrum aspernatur sint voluptatibus neque vero fuga perspiciatis saepe quo, laboriosam enim corrupti deleniti accusantium repellendus pariatur asperiores autem? Consequuntur itaque tempora officiis tenetur illum ipsum repellendus, eius repellat quia </p>
+      {detail?.is_unlayer ? (
+        <iframe
+          className="w-full h-screen"
+          src={`${detail?.unlayerFile?.url}`}
+          frameborder="0"
+        ></iframe>
+      ) : (
+        <div className="text-white leading-8 w-[95%] md:w-[750px] mx-auto my-3 ">
+          {HtmlParser(detail?.description)}
+        </div>
+      )}
+      <div className="max-w-[1300px] mx-auto px-5 my-10">
+        {/* Contact */}
+        <div className="grid grid-cols-12 gap-8 items-center mb-20">
+          {/* Left */}
+          <div className="col-span-12 lg:col-span-6">
+            {/* Contact Form */}
+            <h1 className="text-5xl font-bold uppercase text-white mb-5">
+              Contact Us
+            </h1>
+            <div className="p-5 flex flex-col gap-3 border border-slate-50/20 rounded-md">
+              <input
+                type="text"
+                placeholder="Name"
+                className="pl-3 py-3 rounded-sm outline-none"
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                className="pl-3 py-3 rounded-sm outline-none"
+              />
+              <textarea
+                rows={10}
+                className="rounded-sm pl-3 py-3 outline-none"
+              ></textarea>
+              <button className="py-2 px-6 self-end bg-blue-600 text-white rounded-md">
+                Submit
+              </button>
+            </div>
+            {/* Address */}
+            <div className="mt-5 flex flex-col gap-2 text-white">
+              <div className="grid grid-cols-6 ">
+                <h1 className="col-span-1 uppercase">Address</h1>
+                <p className="col-span-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam inventore unde, quod ducimus, vero earum tempora
+                </p>
+              </div>
+              <div className="grid grid-cols-6 ">
+                <h1 className="col-span-1 uppercase">Visit Us</h1>
+                <a className="col-span-5 underline">
+                  www.opaqueindustries.news
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Right */}
+          <div className="col-span-12 lg:col-span-6 flex flex-col gap-3 text-white">
+            {/* Image */}
+            <div className="bg-white/50 h-[500px] max-w-[500px]">
+              {/* <img src={lottie} alt="" className="w-full"/> */}
+            </div>
+            {/* Text */}
+            <p className="text-lg">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+              sequi dolor ex similique nobis officiis. Ipsum officiis in nobis
+            </p>
+            <h1 className="uppercase text-3xl">Opaque industries ltd.</h1>
+            <div className="flex items-center gap-3">
+              <button className="px-5 py-2 text-white border border-slate-50">
+                Learn More
+              </button>
+              <h1 className="uppercase text-3xl">Our Story</h1>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    
   );
 };
 

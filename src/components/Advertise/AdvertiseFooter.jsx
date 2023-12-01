@@ -2,7 +2,7 @@ import React from "react";
 
 const AdvertiseFooter = () => {
   return (
-    <div className="bg-slate-300 mx-5 rounded overflow-hidden">
+    <div className="bg-bgColor mx-5 rounded overflow-hidden">
       <div className="flex flex-col gap-5">
         <h1 className="text-xl lg:text-3xl font-bold text-white bg-gradient-to-r from-orange-700 to-pink-700 p-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
@@ -19,7 +19,7 @@ const AdvertiseFooter = () => {
             />
           </div>
           <div className="col-span-12 lg:col-span-6">
-            <p className="text-lg lg:text-xl font-semibold">
+            <p className="text-lg lg:text-xl font-semibold text-white">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum
               impedit voluptates, incidunt similique et possimus qui? Eveniet
               optio suscipit dolore nam in architecto, ad assumenda enim modi

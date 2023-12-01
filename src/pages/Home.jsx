@@ -10,16 +10,18 @@ import AdvertiseFooter from "../components/Advertise/AdvertiseFooter";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-black">
       <Navbar2 />
       <Hero />
-      <div className="flex flex-col md:flex-row gap-5 md:gap-3 px-3 my-20">
-        <Trending />
-        <Latest />
+      <div className="bg-bgColor py-10">
+      <div className="max-w-[1300px] mx-auto px-3">
+        <h1 className="text-5xl font-bold text-white">About Us</h1>
+      </div>
+      <Trending />
       </div>
       <AboutUs />
+      <AdvertiseFooter />
       <ContactUs />
-      <AdvertiseFooter/>
       <Foot />
     </div>
   );

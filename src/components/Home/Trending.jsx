@@ -3,22 +3,22 @@ import React from "react";
 import "@splidejs/react-splide/css";
 const Trending = () => {
   return (
-    <div className="grid grid-cols-12 gap-5">
+    <div className="grid grid-cols-12 gap-5 max-w-[1300px] mx-auto bg-gradient-to-r from-orange-700 to-pink-700 p-5">
       {/* Left */}
-      <div className="col-span-12 xl:col-span-6 xl:h-full text-black  flex flex-col gap-5">
+      <div className="col-span-12 xl:col-span-9 xl:h-full text-white  flex flex-col gap-5">
         <h1 className="text-4xl font-bold">Music Focused</h1>
         <p className="">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
           tempora, quas sapiente tempore ipsa quae veritatis debitis at!
           Repudiandae quisquam modi vel, dolores atque illum aliquid ut
           voluptatem sed quod?
-        </p>
+        </p> 
       </div>
       {/* Right */}
       <Splide
         options={{ type: "fade", rewind: true, autoplay: true }}
         aria-label="My Favorite Images"
-        className="col-span-12 xl:col-span-6"
+        className="col-span-12 xl:col-span-3"
       >
         <SplideSlide>
           <img
