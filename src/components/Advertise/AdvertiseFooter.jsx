@@ -2,7 +2,7 @@ import React from "react";
 
 const AdvertiseFooter = () => {
   return (
-    <div className="bg-bgColor mx-5 rounded overflow-hidden">
+    <div className="bg-bgColor mx-5 rounded overflow-hidden my-20">
       <div className="flex flex-col gap-5">
         <h1 className="text-xl lg:text-3xl font-bold text-white bg-gradient-to-r from-orange-700 to-pink-700 p-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam

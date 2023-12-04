@@ -14,7 +14,7 @@ const AdvertiseWithUs = () => {
   const [selecionLooking, setSelectionLooking] = useState("get help");
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center gap-5 p-5 bg-[#191919] text-white min-h-screen">
+    <div className="flex flex-col lg:flex-row justify-center gap-5 p-5 my-20 text-white min-h-screen">
       {/* Big Text */}
       <div className="w-full lg:w-1/2 flex flex-col gap-3">
         {/* <h1 className="text-6xl font-bold">Contact Us</h1> */}

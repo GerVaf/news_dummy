@@ -14,9 +14,7 @@ const Navbar = () => {
     <div className="z-50 sticky top-0">
       <div className="bg-bgColor text-white py-3 px-3 xl:px-0">
         <nav className="max-w-[1300px] mx-auto flex justify-between items-center">
-          <img src={logo} alt="" className="h-10" />
-          {/* Home */}
-          {/* <NavLink to={"/"} className='mr-14 md:mr-32'>Home</NavLink> */}
+          <img src={logo} alt="" className="h-10 cursor-pointer" onClick={()=>nav('/')}/>
           {/* Menu */}
           <h1 onClick={open} className="cursor-pointer">
             Menu

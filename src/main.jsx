@@ -19,7 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <MantineProvider>
       <BrowserRouter>
       <Provider store={store}>
-
         <PersistGate persistor={persistor}>
           <App />
         </PersistGate>

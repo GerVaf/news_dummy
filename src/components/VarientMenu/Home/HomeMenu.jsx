@@ -1,7 +1,7 @@
 import { Accordion, Drawer } from "@mantine/core";
 import React from "react";
 import { main, partner, tools } from "./listArray";
-import "./accordion.css";
+import classes from "./accordion.module.css";
 import List from "../List";
 
 const HomeMenu = ({ opened, close }) => {
@@ -43,29 +43,29 @@ const HomeMenu = ({ opened, close }) => {
         },
         close: {
           color: "white",
-          '&:active':{
-            color:'black'
-          }
+          "&:active": {
+            color: "black",
+          },
         },
         content: {
           background: "#000",
         },
-        
       }}
     >
       {/* Drawer content */}
-      <div className="flex flex-col gap-2 text-white">
+      <div className="flex flex-col gap-2">
         <h1 className="navMenu">Home</h1>
         <Accordion
-          styles={{
-            item: {
-              marginBottom: "5px",
-            },
-          }}
+          classNames={classes}
+          
         >
           {navMenus.map((item) => {
             return (
-              <Accordion.Item key={item.value} value={item.value}>
+              <Accordion.Item
+                key={item.value}
+                value={item.value}
+                
+              >
                 <Accordion.Control>{item.value}</Accordion.Control>
                 <Accordion.Panel>{item.subMenu}</Accordion.Panel>
               </Accordion.Item>
