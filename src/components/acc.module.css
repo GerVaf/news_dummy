@@ -1,4 +1,4 @@
-.root {
+/* .root {
   border-radius: var(--mantine-radius-sm);
   background-color: light-dark(
     var(--mantine-color-gray-0),
@@ -33,4 +33,4 @@
   &[data-rotate] {
     transform: rotate(-90deg);
   }
-}
+} */

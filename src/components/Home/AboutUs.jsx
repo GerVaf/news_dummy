@@ -53,44 +53,45 @@ const AboutUs = () => {
 
   return (
     <div className="max-w-[1300px] mx-auto">
-      <div className="mb-20 flex flex-col gap-10">
-      <h1 className="text-5xl font-bold text-white text-center">
-        About Us
-      </h1>
-      <div className="flex gap-5 text-white">
-        {/* Mission */}
-        <div className="w-1/2 text-end">
-          <h1 className="text-3xl font-bold mb-5">Our Mission</h1>
-          <p>Our aim is to help business in music & sports.</p>
+      <div className="my-20 flex flex-col gap-10">
+        <h1 className="text-5xl font-bold text-white text-center">About Us</h1>
+        <div className="flex flex-col lg:flex-row gap-5 text-white px-5 lg:p-0">
+          {/* Mission */}
+          <div className="w-full lg:w-1/2 lg:text-end">
+            <h1 className="text-3xl font-bold mb-5">Our Mission</h1>
+            <p>Our aim is to help business in music & sports.</p>
+          </div>
+          <div className="hidden lg:flex h-[105px] border w-0"></div>
+          {/* Vision */}
+          <div className="w-full lg:w-1/2">
+            <h1 className="text-3xl font-bold mb-5">Our Vision</h1>
+            <p>
+              To become the biggest international outdoor advertising company
+              across Asia Pacific Region while providing coverage in digital
+              landscape.
+            </p>
+          </div>
         </div>
-        <div className=" h-[105px] border w-0"></div>
-        {/* Vision */}
-        <div className="w-1/2">
-          <h1 className="text-3xl font-bold mb-5">Our Vision</h1>
-          <p>
-            To become the biggest international outdoor advertising company
-            across Asia Pacific Region while providing coverage in digital
-            landscape.
-          </p>
-        </div>
-      </div>
-      <p className="text-white">
-        <span className="text-2xl font-bold">INDX Media</span> is a media publisher, providing display advertising with
-        content marketing & digital promotions. Established for Music & Sports
-        Worlds, providing a fair and transparent environment for both creators
-        and readers alike. Through data-driven insights and innovative marketing
-        strategies, we offer various opportunities for aspiring writers,
-        artists, photographers, and other creatives to showcase their work
-        through our platforms. By providing them with exposure and support, we
-        hope to contribute towards building a sustainable economy for creators
-        in BURMA. Innovation & Integrity is at the heart of everything we do at
-        <span className="text-2xl font-bold"> INDX</span>. At <span className="text-2xl font-bold">INDX</span>, our commitment to continuously innovate and adapt to the
-        ever-evolving publishing landscape is the driving force of our success.
-        Our goal is to revolutionize the way to earn recognition or a promotion
-        or a campaign of how the content is created, distributed, and consumed
-        in various markets digitally or physically. Thank You for taking a look
-        at what we do.
-      </p>
+        <p className="text-white px-5 leading-7 lg:p-0">
+          <span className="text-2xl font-bold">INDX Media</span> is a media
+          publisher, providing display advertising with content marketing &
+          digital promotions. Established for Music & Sports Worlds, providing a
+          fair and transparent environment for both creators and readers alike.
+          Through data-driven insights and innovative marketing strategies, we
+          offer various opportunities for aspiring writers, artists,
+          photographers, and other creatives to showcase their work through our
+          platforms. By providing them with exposure and support, we hope to
+          contribute towards building a sustainable economy for creators in
+          BURMA. Innovation & Integrity is at the heart of everything we do at
+          <span className="text-2xl font-bold"> INDX</span>. At{" "}
+          <span className="text-2xl font-bold">INDX</span>, our commitment to
+          continuously innovate and adapt to the ever-evolving publishing
+          landscape is the driving force of our success. Our goal is to
+          revolutionize the way to earn recognition or a promotion or a campaign
+          of how the content is created, distributed, and consumed in various
+          markets digitally or physically. Thank You for taking a look at what
+          we do.
+        </p>
       </div>
       {/* Category */}
       <AboutCategory category={active}>
