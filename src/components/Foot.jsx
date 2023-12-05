@@ -13,7 +13,7 @@ const Foot = () => {
         <BiLogoInstagramAlt className="hover:scale-105 hover:text-white" />
       </div>
       <p className="text-center">
-        &copy;2023 OPAQUE INDUSTRIES LTD - All Rights Reserved.
+        &copy;2023 INDX Media Group.
       </p>
       <div className="underline flex items-center gap-2">
         <p>Terms & conditions</p>

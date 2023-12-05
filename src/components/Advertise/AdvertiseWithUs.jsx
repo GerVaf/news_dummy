@@ -14,7 +14,7 @@ const AdvertiseWithUs = () => {
   const [selecionLooking, setSelectionLooking] = useState("get help");
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center gap-5 p-5 my-20 text-white min-h-screen">
+    <div className="flex flex-col lg:flex-row justify-center gap-5 p-5 text-white min-h-screen bg-black">
       {/* Big Text */}
       <div className="w-full lg:w-1/2 flex flex-col gap-3">
         {/* <h1 className="text-6xl font-bold">Contact Us</h1> */}
@@ -31,7 +31,7 @@ const AdvertiseWithUs = () => {
           <h1 className="text-3xl font-semibold">I am</h1>
           {/* DropDown */}
           <div onClick={() => setShowIam(!showIam)} className="relative">
-            <div className="flex items-center justify-between cursor-pointer">
+            <div className="flex items-center justify-between cursor-pointer bg-gradient-to-r from-orange-700 to-pink-700 px-3">
               <h1 className="text-3xl">{selecionIam}</h1>
               <SlArrowDown />
             </div>
@@ -63,7 +63,7 @@ const AdvertiseWithUs = () => {
             onClick={() => setShowLooking(!showLooking)}
             className="relative"
           >
-            <div className="flex items-center justify-between cursor-pointer">
+            <div className="flex items-center justify-between cursor-pointer bg-gradient-to-r from-orange-700 to-pink-700 px-3">
               <h1 className="text-3xl">{selecionLooking}</h1>
               <SlArrowDown />
             </div>
@@ -111,7 +111,7 @@ const AdvertiseWithUs = () => {
           </button>
         </div>
         {/* Address */}
-        <div className="mt-5 flex flex-col gap-2 text-white">
+        {/* <div className="mt-5 flex flex-col gap-2 text-white">
           <div className="grid grid-cols-6 ">
             <h1 className="col-span-1 uppercase">Address</h1>
             <p className="col-span-6 md:col-span-5">
@@ -125,7 +125,7 @@ const AdvertiseWithUs = () => {
               www.opaqueindustries.news
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

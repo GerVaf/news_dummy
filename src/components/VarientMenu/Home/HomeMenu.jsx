@@ -3,6 +3,7 @@ import React from "react";
 import { main, partner, tools } from "./listArray";
 import classes from "./accordion.module.css";
 import List from "../List";
+import { Link } from "react-router-dom";
 
 const HomeMenu = ({ opened, close }) => {
   const navMenus = [
@@ -74,7 +75,7 @@ const HomeMenu = ({ opened, close }) => {
         </Accordion>
         <h1 className="text-2xl">Contact Us</h1>
         <h1 className="text-2xl">Products</h1>
-        <h1 className="text-2xl">About Us</h1>
+        <Link to={'/aboutUs'} className="text-2xl">About Us</Link>
         <h1 className="text-2xl">Shop</h1>
         <h1 className="text-2xl">Radio</h1>
         <h1 className="text-2xl">Faq</h1>

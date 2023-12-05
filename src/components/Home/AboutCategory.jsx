@@ -7,7 +7,9 @@ const AboutCategory = ({ category, children }) => {
       {children}
       {/* Left */}
       <div className="col-span-12 xl:col-span-9 xl:h-full text-white  flex flex-col gap-5">
-        <h1 className="text-4xl font-bold uppercase">{category.title} Focused</h1>
+        <h1 className="text-4xl font-bold uppercase">
+          {category.title} Focused
+        </h1>
         <p className="">{category.text}</p>
       </div>
       {/* Right */}
@@ -17,6 +19,7 @@ const AboutCategory = ({ category, children }) => {
           rewind: true,
           autoplay: true,
           arrows: false,
+          interval: 1000,
         }}
         aria-label="My Favorite Images"
         className="col-span-12 xl:col-span-3"
@@ -36,7 +39,6 @@ const AboutCategory = ({ category, children }) => {
           />
         </SplideSlide>
       </Splide>
-      
     </div>
   );
 };

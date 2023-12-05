@@ -1,6 +1,7 @@
 import React from "react";
 import { Accordion } from "@mantine/core";
 import classes from "./acc.module.css";
+import { Link } from "react-router-dom";
 const AccordionBox = () => {
   const texts = [
     {
@@ -46,13 +47,27 @@ const AccordionBox = () => {
   ];
 
   return (
-    <div className="max-w-[1000px] mx-auto px-5 lg:p-0">
-      <h1 className="text-white font-bold text-3xl lg:text-5xl text-center mb-10">Why Advertise with us</h1>
-      <ul className="text-white space-y-3">
-        {texts.map(text=>{
-          return <li><span className="font-bold text-xl">+</span> {text.description}</li>
-        })}
-      </ul>
+    <div className="bg-black">
+      <div className="max-w-[1000px] mx-auto py-5 px-5 lg:p-0 flex flex-col gap-5">
+        <h1 className="text-white font-bold text-3xl lg:text-5xl text-center mb-10">
+          Why Advertise with us
+        </h1>
+        <ul className="text-white space-y-3">
+          {texts.map((text) => {
+            return (
+              <li>
+                <span className="font-bold text-xl">+</span> {text.description}
+              </li>
+            );
+          })}
+        </ul>
+        <Link
+          to={"/advertiseWithUs"}
+          className="px-5 py-2 self-start border border-slate-100 text-white mb-5"
+        >
+          Advertise With Us
+        </Link>
+      </div>
     </div>
   );
 };
