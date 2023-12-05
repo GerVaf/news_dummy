@@ -9,7 +9,7 @@ const AdvertiseFooter = () => {
           Who we are
         </h1>
         <div className=" bg-center" style={{backgroundImage:`url(https://images.unsplash.com/photo-1701198067976-3c2b6bf5f5c1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)`}}>
-        <div className="flex flex-col gap-5 bg-black/60 p-8">
+        <div className="flex flex-col gap-5 bg-black/60 p-5">
             <p className="text-white mx-auto">
               At INDX, our commitment
               to continuously innovate and adapt to the ever-evolving publishing
