@@ -1,9 +1,8 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import React, { useState } from "react";
 import { IoChevronDownOutline } from "react-icons/io5";
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import {  FaArrowCircleRight } from "react-icons/fa";
 import "@splidejs/react-splide/css";
-// import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import "./custom.css";
 
 const Center = () => {

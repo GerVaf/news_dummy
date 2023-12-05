@@ -6,27 +6,23 @@ import Navbar2 from "../components/Navbar2";
 import AdvertiseFooter from "../components/Advertise/AdvertiseFooter";
 import AdvertiseWithUs from "../components/Advertise/AdvertiseWithUs";
 import Shop from "../components/Home/Shop";
-import Radio from "../components/Home/Radio";
 import Advertise from "../components/Advertise/Advertise";
-import AccordionBox from "../components/AccordionBox";
+import ContactUs from "../components/Home/ContactUs";
 
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="select-none bg-black ">
       <Navbar2 />
       <Hero />
-      <div
-        style={{
-          backgroundImage: `repeating-linear-gradient(45deg, rgb(255,255,255) 0px, rgb(255,255,255) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(135deg, rgb(255,255,255) 0px, rgb(255,255,255) 10px,transparent 10px, transparent 11px),linear-gradient(90deg, hsl(256,7%,84%),hsl(256,7%,84%))`,
-        }}
-      >
-        <AboutUs />
-        <Shop />
-        <AdvertiseFooter />
-        <Advertise />
-      </div>
+      <AboutUs />
+      <Shop />
+      <AdvertiseFooter />
+      <Advertise />
       <AdvertiseWithUs />
-      <Foot />
+      {/* <div className="relative mt-[28rem] md:mt-80 lg:mt-56"> */}
+        {/* <ContactUs /> */}
+        <Foot />
+      {/* </div> */}
     </div>
   );
 };

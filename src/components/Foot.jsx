@@ -6,7 +6,7 @@ import {
 } from "react-icons/bi";
 const Foot = () => {
   return (
-    <div className="text-gray-500 flex flex-col items-center gap-4 py-5 px-5">
+    <div className="text-gray-500 bg-bgColor flex flex-col items-center gap-4 py-5 px-5">
       <div className="flex items-center gap-5 text-2xl cursor-pointer">
         <BiLogoFacebookCircle className="hover:scale-105 hover:text-white" />
         <BiLogoTwitter className="hover:scale-105 hover:text-white" />

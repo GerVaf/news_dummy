@@ -5,8 +5,8 @@ const AdvertiseFooter = () => {
   return (
     <div className="bg-bgColor mx-auto rounded overflow-hidden my-20 max-w-[1300px]">
       <div className="flex flex-col gap-5">
-        <h1 className="text-xl lg:text-3xl font-bold text-white bg-gradient-to-r from-orange-700 to-pink-700 p-5">
-          Who are we
+        <h1 className="text-4xl uppercase font-bold text-white darkLightBg p-5">
+          Who we are
         </h1>
         <div className="grid grid-cols-12 gap-5 px-5 mb-5">
           <div className="col-span-12 lg:col-span-6 h-[450px]">
@@ -17,9 +17,8 @@ const AdvertiseFooter = () => {
             />
           </div>
           <div className="col-span-12 lg:col-span-6 flex flex-col gap-5">
-            <p className="text-white tracking-widest leading-10  mx-auto">
-              At
-              <span className="text-2xl font-bold"> INDX</span>, our commitment
+            <p className="text-white tracking-widest leading-10 mx-auto">
+              At INDX, our commitment
               to continuously innovate and adapt to the ever-evolving publishing
               landscape is the driving force of our success. Our goal is to
               revolutionize the way to earn recognition or a promotion or a

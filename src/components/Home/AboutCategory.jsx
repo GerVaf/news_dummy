@@ -3,14 +3,14 @@ import React from "react";
 
 const AboutCategory = ({ category, children }) => {
   return (
-    <div className="grid grid-cols-12 gap-5 bg-gradient-to-r from-orange-700 to-pink-700 p-5 relative">
+    <div className="grid grid-cols-12 gap-5 p-5 relative darkLightBg">
       {children}
       {/* Left */}
-      <div className="col-span-12 xl:col-span-9 xl:h-full text-white  flex flex-col gap-5">
+      <div className="col-span-12 xl:col-span-9 xl:h-full text-white flex flex-col gap-5">
         <h1 className="text-4xl font-bold uppercase">
           {category.title} Focused
         </h1>
-        <p className="">{category.text}</p>
+        <p>{category.text}</p>
       </div>
       {/* Right */}
       <Splide

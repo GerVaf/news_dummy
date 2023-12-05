@@ -16,3 +16,8 @@
 .apple-play-container {
   @apply w-48 flex items-center gap-3 bg-white text-white rounded-md px-5 py-2;
 }
+
+
+.darkLightBg{
+  @apply bg-gradient-to-r from-orange-700 to-pink-700 dark:from-blue-600 dark:to-blue-400
+}

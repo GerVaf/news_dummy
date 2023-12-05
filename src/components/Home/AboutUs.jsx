@@ -13,7 +13,7 @@ const AboutUs = () => {
     },
     {
       title: "sport",
-      text: "Get the latest results of your favourite match, players or clubs from all around the globe. We cover both Premier League & Champion League games by patterning with ISPO & Leagues Regulator internationally. Find local market's latests trends and listen exclusives news & interviews directly in INDX sports.",
+      text: "Get the latest results of your favourite match, players or clubs from all around the globe. We cover both Premier League & Champion League games by patnering with ISPO & Leagues Regulator internationally. Find local market's latests trends and listen exclusives news & interviews directly in INDX sports.",
     },
 
     {

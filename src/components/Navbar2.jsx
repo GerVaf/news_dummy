@@ -56,7 +56,7 @@ const Navbar2 = () => {
     <motion.div
       variants={navbarVariants}
       animate={isScrolled ? "scrolled" : "notScrolled"}
-      className="sticky top-10 z-10 text-orange-600"
+      className="sticky top-10 z-10 text-orange-600 dark:text-blue-600"
     >
       <div className="flex gap-2 items-center p-5 justify-center">
         {navData.map((el) => {
@@ -68,7 +68,7 @@ const Navbar2 = () => {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               {/* parent title */}
-              <motion.div className="flex justify-center items-center hover:text-red-500 transition duration-150">
+              <motion.div className="flex justify-center items-center hover:text-red-500 dark:hover:text-blue-500` transition duration-150">
                 [<p>{el.title}</p>
                 {el?.addition ? (
                   <IoIosArrowDown className="text-[15px] font-bold" />
@@ -86,7 +86,7 @@ const Navbar2 = () => {
                 >
                   {el.addition.map((child) => (
                     <motion.p
-                      className="hover:text-red-500 transition duration-150"
+                      className="hover:text-red-500 dark:hover:text-blue-500` transition duration-150"
                       key={child.id}
                     >
                       <Link to={child.link}>{child.title}</Link>

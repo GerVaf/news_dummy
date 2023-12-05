@@ -11,14 +11,14 @@ const AdvertiseWithUs = () => {
   const [selecionIam, setSelectionIam] = useState("Writer");
 
   const [showLooking, setShowLooking] = useState(false);
-  const [selecionLooking, setSelectionLooking] = useState("get help");
+  const [selecionLooking, setSelectionLooking] = useState("Get help");
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center gap-5 p-5 text-white min-h-screen bg-black">
+    <div className="flex flex-col lg:flex-row justify-center gap-5 p-5 text-white min-h-screen bg-black ">
       {/* Big Text */}
       <div className="w-full lg:w-1/2 flex flex-col gap-3">
         {/* <h1 className="text-6xl font-bold">Contact Us</h1> */}
-        <h3 className="text-4xl lg:text-6xl font-semibold">
+        <h3 className="text-4xl lg:text-6xl font-bold">
           Looking for something a little more custom? Let's talk.
         </h3>
       </div>
@@ -28,11 +28,11 @@ const AdvertiseWithUs = () => {
       <div className="w-full lg:w-1/2 flex flex-col gap-5">
         {/* I am ... */}
         <div className="flex flex-col gap-3 w-[50%] lg:w-[30%] z-20">
-          <h1 className="text-3xl font-semibold">I am</h1>
+          <h1 className="text-4xl font-semibold">I am</h1>
           {/* DropDown */}
           <div onClick={() => setShowIam(!showIam)} className="relative">
-            <div className="flex items-center justify-between cursor-pointer bg-gradient-to-r from-orange-700 to-pink-700 px-3">
-              <h1 className="text-3xl">{selecionIam}</h1>
+            <div className="flex items-center justify-between cursor-pointer darkLightBg px-3">
+              <h1 className="text-4xl">{selecionIam}</h1>
               <SlArrowDown />
             </div>
             <div
@@ -63,7 +63,7 @@ const AdvertiseWithUs = () => {
             onClick={() => setShowLooking(!showLooking)}
             className="relative"
           >
-            <div className="flex items-center justify-between cursor-pointer bg-gradient-to-r from-orange-700 to-pink-700 px-3">
+            <div className="flex items-center justify-between cursor-pointer darkLightBg px-3">
               <h1 className="text-3xl">{selecionLooking}</h1>
               <SlArrowDown />
             </div>
@@ -110,22 +110,6 @@ const AdvertiseWithUs = () => {
             Submit
           </button>
         </div>
-        {/* Address */}
-        {/* <div className="mt-5 flex flex-col gap-2 text-white">
-          <div className="grid grid-cols-6 ">
-            <h1 className="col-span-1 uppercase">Address</h1>
-            <p className="col-span-6 md:col-span-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
-              inventore unde, quod ducimus, vero earum tempora
-            </p>
-          </div>
-          <div className="grid grid-cols-6 ">
-            <h1 className="col-span-1 uppercase">Visit Us</h1>
-            <a className="col-span-6 md:col-span-5 underline">
-              www.opaqueindustries.news
-            </a>
-          </div>
-        </div> */}
       </div>
     </div>
   );
