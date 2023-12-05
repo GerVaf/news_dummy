@@ -56,7 +56,7 @@ const AboutUs = () => {
       {/* Category */}
       <AboutCategory category={active}>
         {/* Choose category */}
-        <div className="flex xl:absolute xl:bottom-5 xl:left-5">
+        <div className="flex xl:absolute xl:-top-11 xl:right-0">
           <div className="flex items-center gap-3 text-white border border-slate-50/60 px-5 py-2 uppercase">
             {categories.map((cate) => {
               return (
