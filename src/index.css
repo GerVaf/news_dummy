@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 /* NavMenu */
-.navMenu {
-  @apply py-2 px-3 border border-slate-100;
-}
+/* .navMenu {
+  @apply py-2 px-3 bg-gradient-to-r from-orange-600 to-pink-600;
+} */
 
 /* Contact */
 .contact-social-btn {
@@ -17,7 +17,56 @@
   @apply w-48 flex items-center gap-3 bg-white text-white rounded-md px-5 py-2;
 }
 
+.darkLightBg {
+  @apply bg-gradient-to-r from-orange-700 to-pink-700 dark:from-blue-600 dark:to-blue-400;
+}
 
-.darkLightBg{
-  @apply bg-gradient-to-r from-orange-700 to-pink-700 dark:from-blue-600 dark:to-blue-400
+.navMenu {
+  cursor: pointer;
+  display: flex;
+  padding: 0.8em 1.1em;
+  gap: 0.4rem;
+  border: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(
+      15deg,
+      #880088,
+      #aa2068,
+      #cc3f47,
+      #de6f3d,
+      #f09f33,
+      #de6f3d,
+      #cc3f47,
+      #aa2068,
+      #880088
+    )
+    no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  transition: background 0.5s ease;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.navMenu:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+
+.custom-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: #d7d7d7;
+}
+
+/* Chrome, Edge, and Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #aeaeae25;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+  height: 50px;
+  border-radius: 10px;
 }

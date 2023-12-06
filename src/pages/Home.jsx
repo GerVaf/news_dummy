@@ -7,7 +7,6 @@ import AdvertiseFooter from "../components/Advertise/AdvertiseFooter";
 import AdvertiseWithUs from "../components/Advertise/AdvertiseWithUs";
 import Shop from "../components/Home/Shop";
 import Advertise from "../components/Advertise/Advertise";
-import ContactUs from "../components/Home/ContactUs";
 
 const Home = () => {
   return (
@@ -19,9 +18,9 @@ const Home = () => {
       <AdvertiseFooter />
       <Advertise />
       <AdvertiseWithUs />
+      <Foot />
       {/* <div className="relative mt-[28rem] md:mt-80 lg:mt-56"> */}
-        {/* <ContactUs /> */}
-        <Foot />
+      {/* <ContactUs /> */}
       {/* </div> */}
     </div>
   );

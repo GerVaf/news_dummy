@@ -4,6 +4,7 @@ import Path from "./routes/Path";
 import ThemeBtn from "./components/ThemeBtn";
 
 const App = () => {
+  
   const [darkMode, setDarkMode] = useState(false);
   const iconToggle = () => {
     setDarkMode(!darkMode);
@@ -32,6 +33,7 @@ const App = () => {
   useEffect(() => {
     ThemeCheck();
   }, []);
+
   return (
     <div className="bg-slate-200 font-sans">
       {/* Light/Dark Theme Btn */}

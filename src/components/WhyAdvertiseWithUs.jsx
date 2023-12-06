@@ -1,8 +1,7 @@
 import React from "react";
-import { Accordion } from "@mantine/core";
-import classes from "./acc.module.css";
 import { Link } from "react-router-dom";
-const AccordionBox = () => {
+
+const WhyAdvertiseWithUs = () => {
   const texts = [
     {
       description:
@@ -72,4 +71,4 @@ const AccordionBox = () => {
   );
 };
 
-export default AccordionBox;
+export default WhyAdvertiseWithUs;

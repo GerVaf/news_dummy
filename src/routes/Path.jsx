@@ -7,7 +7,7 @@ import Detail from "../pages/Detail";
 import AdvertiseWithUs from "../components/Advertise/AdvertiseWithUs";
 import Business from "../pages/Business";
 import AboutUs from "../pages/AboutUs";
-import AccordionBox from "../components/AccordionBox";
+import WhyAdvertiseWithUs from "../components/WhyAdvertiseWithUs";
 
 const Path = () => {
   return (
@@ -18,7 +18,7 @@ const Path = () => {
       <Route path="/detail" element={<Detail />} />
       <Route path="/business" element={<Business />} />
       <Route path="/aboutUs" element={<AboutUs />} />
-      <Route path="/whyAdvertise" element={<AccordionBox />} />
+      <Route path="/whyAdvertise" element={<WhyAdvertiseWithUs />} />
       <Route path="/advertiseWithUs" element={<AdvertiseWithUs/>}/>
     </Routes>
   );
