@@ -1,27 +1,24 @@
 import React from "react";
 import Foot from "../components/Foot";
 import Hero from "../components/Home/Hero";
-import AboutUs from "../components/Home/AboutUs";
 import Navbar2 from "../components/Navbar2";
-import AdvertiseFooter from "../components/Advertise/AdvertiseFooter";
 import AdvertiseWithUs from "../components/Advertise/AdvertiseWithUs";
 import Shop from "../components/Home/Shop";
 import Advertise from "../components/Advertise/Advertise";
+import Genre from "../components/Home/Genre";
+import WhoWeAre from "../components/Home/WhoWeAre";
 
 const Home = () => {
   return (
-    <div className="select-none bg-black ">
+    <div className="select-none bg-black">
       <Navbar2 />
       <Hero />
-      <AboutUs />
+      <Genre />
       <Shop />
-      <AdvertiseFooter />
+      <WhoWeAre />
       <Advertise />
       <AdvertiseWithUs />
       <Foot />
-      {/* <div className="relative mt-[28rem] md:mt-80 lg:mt-56"> */}
-      {/* <ContactUs /> */}
-      {/* </div> */}
     </div>
   );
 };

@@ -5,7 +5,7 @@ const List = ({ array }) => {
     // for accordian list
     <div className="space-y-4 mt-5">
       {array.map((item, i) => (
-        <h1 key={i} className="navMenu mx-3">
+        <h1 key={i} className="navMenu ml-3">
           {item}
         </h1>
       ))}

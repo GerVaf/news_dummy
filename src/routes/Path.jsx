@@ -14,7 +14,7 @@ const Path = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/music" element={<Music />} />
-      <Route path="/sports" element={<Sport />} />
+      <Route path="/sport" element={<Sport />} />
       <Route path="/detail" element={<Detail />} />
       <Route path="/business" element={<Business />} />
       <Route path="/aboutUs" element={<AboutUs />} />

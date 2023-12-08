@@ -1,30 +1,8 @@
-import { Drawer } from "@mantine/core";
 import React from "react";
 
-const SportMenu = ({ opened, close }) => {
+const SportMenu = () => {
   return (
-    <Drawer
-      opened={opened}
-      onClose={close}
-      title="Menu"
-      position="right"
-      overlayProps={{ backgroundOpacity: 0.5, blur: 4 }}
-      styles={{
-        root: {
-          color: "white",
-        },
-        header: {
-          background: "#000",
-        },
-        close: {
-          color: "white",
-        },
-        content: {
-          background: "#000",
-        },
-      }}
-    >
-      {/* Drawer content */}
+
       <div className="flex flex-col gap-2 text-white">
         <h1 className="navMenu">Leagues</h1>
         <h1 className="navMenu">Featured news</h1>
@@ -37,7 +15,6 @@ const SportMenu = ({ opened, close }) => {
         <h1 className="text-2xl">Radio</h1>
         <h1 className="text-2xl">Faq</h1>
       </div>
-    </Drawer>
   );
 };
 

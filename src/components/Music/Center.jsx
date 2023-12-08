@@ -1,16 +1,41 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoChevronDownOutline } from "react-icons/io5";
-import {  FaArrowCircleRight } from "react-icons/fa";
+import { FaArrowCircleRight } from "react-icons/fa";
 import "@splidejs/react-splide/css";
 import "./custom.css";
+import { get } from "../../Global/api";
 
-const Center = () => {
+const Center = ({category}) => {
   const [show, setShow] = useState(false);
+  const [news, setNews] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    try {
+      get(`/published_blogs?limit=10&category=${category}`).then((response) => {
+        const sortDateData = response?.data?.data?.sort((a, b) =>
+          a.date < b.date ? 1 : -1
+        );
+        setNews(sortDateData);
+        setIsLoading(false);
+        console.log(response?.data?.data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  if (isLoading) {
+    return <h1>Loading....</h1>;
+  }
   return (
-    <div className="bg-bgColor rounded text-white p-5 flex flex-col items-start gap-5">
+    <div className="bg-bgColor rounded text-white flex flex-col items-start pb-8 gap-5">
       {/* Top */}
-      <div className={`overflow-hidden transition-all border-b ${show ? 'h-[60px]' : 'h-[30px] '}`}>
+      <div
+        className={`overflow-hidden transition-all border-b m-5 ${
+          show ? "h-[60px]" : "h-[30px] "
+        }`}
+      >
         {/* DropDown */}
         <div
           onClick={() => setShow(!show)}
@@ -31,23 +56,28 @@ const Center = () => {
           gap: 10,
         }}
         aria-label="My Favorite Images"
-        className="h-[350px] lg:h-[500px] mb-8"
+        className="h-[400px] lg:h-[500px] mb-8"
       >
         <SplideTrack>
-          <SplideSlide className="h-[350px] lg:h-[500px]">
-            <img
-              src="https://plus.unsplash.com/premium_photo-1700170363213-add0962221c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8"
-              alt="Image 1"
-              className="h-[350px] lg:h-[500px] aspect-video"
-            />
-          </SplideSlide>
-          <SplideSlide className="h-[350px] lg:h-[500px]">
-            <img
-              src="https://images.unsplash.com/photo-1682695795557-17447f921f79?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"
-              alt="Image 2"
-              className="h-[350px] lg:h-[500px] aspect-video"
-            />
-          </SplideSlide>
+          {news?.map((el) => {
+            return (
+              <SplideSlide
+                key={el.id}
+                className="w-full h-[400px] lg:h-[500px]"
+              >
+                <img
+                  src={el.images?.url}
+                  alt="Image 1"
+                  className="w-full h-[400px] lg:h-[500px] object-cover relative"
+                />
+                <div className="absolute bottom-0 flex items-end bg-gradient-to-b from-transparent via-black/60 to-black/90 h-1/3 w-full">
+                  <h1 className="text-xl leading-5 lg:text-3xl font-bold px-4 mb-10 lg:leading-[3.2rem]">
+                    {el.title}
+                  </h1>
+                </div>
+              </SplideSlide>
+            );
+          })}
         </SplideTrack>
         <div className="splide__arrows custom-arrows">
           <button className="splide__arrow splide__arrow--prev">

@@ -48,13 +48,13 @@ const WhyAdvertiseWithUs = () => {
   return (
     <div className="bg-black">
       <div className="max-w-[1000px] mx-auto py-5 px-5 lg:p-0 flex flex-col gap-5">
-        <h1 className="text-white font-bold text-3xl lg:text-5xl text-center mb-10">
+        <h1 className="text-white font-bold text-3xl lg:text-5xl text-center my-10">
           Why Advertise with us
         </h1>
         <ul className="text-white space-y-3">
           {texts.map((text) => {
             return (
-              <li>
+              <li key={text}>
                 <span className="font-bold text-xl">+</span> {text.description}
               </li>
             );

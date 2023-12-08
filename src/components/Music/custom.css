@@ -12,3 +12,21 @@
 .splide__arrow svg {
   fill: white;
 }
+.splide__pagination{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.splide__pagination__page{
+  background: rgb(117, 117, 117) !important;
+  width: 15px;
+  height: 4px;
+  border-radius: 10px;
+  transition: width ease-in-out 0.1s;
+}
+button.splide__pagination__page.is-active{
+  width: 35px;
+  transform: scale(1);
+  border-radius: 10px;
+  background: white !important;
+}

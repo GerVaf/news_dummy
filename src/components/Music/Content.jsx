@@ -12,7 +12,7 @@ const Content = ({ cate }) => {
       </div>
       {/* Center */}
       <div className="col-span-12 lg:col-span-6">
-        <Center />
+        <Center category={cate}/>
       </div>
       {/* Right */}
       <div className="col-span-12 lg:col-span-3">

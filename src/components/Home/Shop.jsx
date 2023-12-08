@@ -1,7 +1,4 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import React, { useState } from "react";
-import Advertise from "../Advertise/Advertise";
 
 const Shop = () => {
   const [show, setShow] = useState(false);

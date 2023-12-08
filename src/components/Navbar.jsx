@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import HomeMenu from "./VarientMenu/HomeMenu";
-import SportMenu from "./VarientMenu/SportMenu";
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
-import MusicMenu from "./VarientMenu/MusicMenu";
 import logo from "../../public/logo.svg";
+import Menu from "../utils/Menu";
 const Navbar = () => {
   const nav = useNavigate();
   const location = useLocation();
@@ -27,15 +25,7 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {path === "/" ? (
-        <HomeMenu opened={opened} close={close} />
-      ) : path === "/music" ? (
-        <MusicMenu opened={opened} close={close} />
-      ) : path === "/sports" ? (
-        <SportMenu opened={opened} close={close} />
-      ) : (
-        path === "/business" && <HomeMenu opened={opened} close={close} />
-      )}
+      <Menu opened={opened} close={close} path={path}/>
     </div>
   );
 };

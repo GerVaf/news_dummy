@@ -37,7 +37,7 @@ const Navbar2 = () => {
         {
           id:2,
           title:'Sport',
-          link:'/sports'
+          link:'/sport'
         },
         {
           id:3,

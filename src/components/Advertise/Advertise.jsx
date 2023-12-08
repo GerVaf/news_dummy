@@ -1,5 +1,5 @@
 import React from "react";
-import AdvertiseCard from "./AdvertiseCard";
+import AdvertiseCard from "../../utils/AdvertiseCard";
 
 const Advertise = () => {
   return (
