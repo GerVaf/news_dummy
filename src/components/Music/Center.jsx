@@ -71,7 +71,7 @@ const Center = ({category}) => {
                   className="w-full h-[400px] lg:h-[500px] object-cover relative"
                 />
                 <div className="absolute bottom-0 flex items-end bg-gradient-to-b from-transparent via-black/60 to-black/90 h-1/3 w-full">
-                  <h1 className="text-xl leading-5 lg:text-3xl font-bold px-4 mb-10 lg:leading-[3.2rem]">
+                  <h1 className="text-xl leading-10 lg:text-3xl font-bold px-4 mb-10 lg:leading-[3.2rem]">
                     {el.title}
                   </h1>
                 </div>
