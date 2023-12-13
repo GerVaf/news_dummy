@@ -70,12 +70,12 @@ const Navbar2 = () => {
               {/* parent title */}
               <motion.div className="flex justify-center items-center hover:text-red-500 dark:hover:text-blue-500` transition duration-150">
                 [<p>{el.title}</p>
+                ]
                 {el?.addition ? (
                   <IoIosArrowDown className="text-[15px] font-bold" />
                 ) : (
                   ""
                 )}
-                ]
               </motion.div>
               {/* child dropdown */}
               {openDropdown === el.id && el?.addition && (

@@ -2,10 +2,21 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Path from "./routes/Path";
 import ThemeBtn from "./components/ThemeBtn";
+import Loading from "./utils/Loading";
+import {motion} from 'framer-motion';
+
+const loadingVarient = {
+  aniamte:{
+    opacity:1
+  },
+  initial:{
+    opacity:0
+  }
+}
 
 const App = () => {
-  
   const [darkMode, setDarkMode] = useState(false);
+  const [loading, setLoading] = useState(true);
   const iconToggle = () => {
     setDarkMode(!darkMode);
   };
@@ -32,10 +43,14 @@ const App = () => {
 
   useEffect(() => {
     ThemeCheck();
+    setTimeout(() => setLoading(false), 3000);
   }, []);
 
+  if(loading){
+    return <Loading/>
+  }
   return (
-    <div className="bg-slate-200 font-sans">
+    <motion.div animate={{opacity:1}} initial={{opacity:0.5}} transition={{duration:1}} className={`bg-slate-200 font-sans`}>
       {/* Light/Dark Theme Btn */}
       <ThemeBtn
         darkMode={darkMode}
@@ -44,7 +59,7 @@ const App = () => {
       />
       <Navbar />
       <Path />
-    </div>
+    </motion.div>
   );
 };
 

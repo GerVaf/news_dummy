@@ -24,6 +24,12 @@
   @apply bg-gradient-to-r from-orange-700 to-pink-700 dark:from-blue-600 dark:to-blue-400;
 }
 
+.logo{
+  color: #fff;
+  text-shadow: 0 0 3px #a4a4a4, 0 0 3px #a4a4a4, 0 0 3px #a4a4a4, 0 0 3px #a4a4a4,
+    0 0 3px #a4a4a4, 0 0 3px #a4a4a4
+}
+
 .navMenu {
   text-transform: uppercase;
   cursor: pointer;

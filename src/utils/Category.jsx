@@ -34,7 +34,7 @@ const Category = ({ categories,active,setActive }) => {
 
   return (
     <div className="flex xl:absolute xl:-top-11 xl:right-0">
-      <div className="flex items-center gap-3 text-white border border-slate-50/60 px-5 py-2 uppercase">
+      <div className="flex items-center gap-3 dark:text-white border dark:border-blue-600 px-5 py-2 uppercase text-white border-orange-600">
         {categories.map((cate) => {
           return (
             <div
@@ -52,7 +52,7 @@ const Category = ({ categories,active,setActive }) => {
               <motion.div
                 variants={cateVarient2}
                 animate={active.title === cate.title ? "animate" : "initial"}
-                className="bg-white px-3 text-black"
+                className="dark:bg-white px-3 dark:text-black text-white darkLightBg"
               >
                 {cate.title}
               </motion.div>

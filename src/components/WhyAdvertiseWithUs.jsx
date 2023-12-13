@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MusicSportFooter from "./Music/MusicSportFooter";
 
 const WhyAdvertiseWithUs = () => {
   const texts = [
@@ -47,7 +48,7 @@ const WhyAdvertiseWithUs = () => {
 
   return (
     <div className="bg-black">
-      <div className="max-w-[1000px] mx-auto py-5 px-5 lg:p-0 flex flex-col gap-5">
+      <div className="max-w-[1000px] mx-auto py-5 px-5 lg:p-0 flex flex-col gap-5 mb-10">
         <h1 className="text-white font-bold text-3xl lg:text-5xl text-center my-10">
           Why Advertise with us
         </h1>
@@ -67,6 +68,7 @@ const WhyAdvertiseWithUs = () => {
           Advertise With Us
         </Link>
       </div>
+      <MusicSportFooter/>
     </div>
   );
 };
