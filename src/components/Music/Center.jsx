@@ -6,25 +6,23 @@ import "@splidejs/react-splide/css";
 import "./custom.css";
 import { get } from "../../Global/api";
 
-const Center = ({category}) => {
+const Center = ({ category }) => {
   const [show, setShow] = useState(false);
   const [news, setNews] = useState();
+  const [program, setProgram] = useState('International');
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     try {
-      get(`/published_blogs?limit=10&category=${category}`).then((response) => {
-        const sortDateData = response?.data?.data?.sort((a, b) =>
-          a.date < b.date ? 1 : -1
-        );
-        
-        setNews(sortDateData);
+      get(`/programs?category=${category}&programs=${program}`).then((response) => {
+        setNews(response?.data?.data);
+        // console.log(news)
         setIsLoading(false);
-        console.log(response?.data?.data);
       });
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [program]);
 
   if (isLoading) {
     return <h1>Loading....</h1>;
@@ -33,19 +31,26 @@ const Center = ({category}) => {
     <div className="bg-bgColor rounded text-white flex flex-col items-start pb-8 gap-5">
       {/* Top */}
       <div
-        className={`overflow-hidden transition-all border-b m-5 ${
+        className={`overflow-hidden transition-all border-b m-5 z-40 ${
           show ? "h-[60px]" : "h-[30px] "
         }`}
       >
         {/* DropDown */}
         <div
-          onClick={() => setShow(!show)}
-          className="flex justify-between items-center gap-5"
+          onClick={(e) => {
+            e.stopPropagation();
+            setShow(!show);
+          }}
+          className="flex justify-between items-center gap-5 cursor-pointer"
         >
-          <h1 className="uppercase">International News</h1>
+          <h1 onClick={() => setProgram("International")} className="uppercase">
+            International News
+          </h1>
           <IoChevronDownOutline />
         </div>
-        <h1 className="uppercase mt-2">Regional News</h1>
+        <h1 onClick={() => setProgram("Regional")} className="uppercase mt-2 cursor-pointer">
+          Regional News
+        </h1>
       </div>
       {/* SlideShow */}
       <Splide
@@ -57,10 +62,10 @@ const Center = ({category}) => {
           gap: 10,
         }}
         aria-label="My Favorite Images"
-        className="h-[400px] lg:h-[500px] mb-8"
+        className="h-[400px] lg:h-[500px] mb-8 w-full"
       >
         <SplideTrack>
-          {news?.map((el) => {
+          {news[0]?.blogs?.map((el) => {
             return (
               <SplideSlide
                 key={el.id}

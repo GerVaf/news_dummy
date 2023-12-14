@@ -1,4 +1,3 @@
-import ReactPlayer from 'react-player';
 import videoGif from '../../assets/videoGif.gif'
 
 const Hero = () => {

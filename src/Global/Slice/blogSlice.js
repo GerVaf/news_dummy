@@ -23,6 +23,7 @@ export const BlogSlice = createSlice({
     addSport: (state, action) => {
       state.sport = action.payload;
     },
+    
   },
 });
 
