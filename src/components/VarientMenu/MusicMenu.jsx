@@ -4,8 +4,6 @@ import React from "react";
 
 const MusicMenu = () => {
   return (
-
-   
       <div className="flex flex-col gap-2 text-white">
         <h1 className="navMenu">Charts</h1>
         <h1 className="navMenu">Featured News</h1>

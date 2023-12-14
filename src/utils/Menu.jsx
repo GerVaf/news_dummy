@@ -25,14 +25,12 @@ const Menu = ({ opened, close, path }) => {
         <IoClose onClick={close} className="text-xl rounded cursor-pointer" />
       </div>
       {/* Drawer content */}
-      {path === "/" ? (
-        <HomeMenu />
-      ) : path === "/music" ? (
+      {path === "/music" ? (
         <MusicMenu />
       ) : path === "/sport" ? (
         <SportMenu />
       ) : (
-        path === "/business" && <HomeMenu />
+        <HomeMenu />
       )}
     </Drawer>
   );

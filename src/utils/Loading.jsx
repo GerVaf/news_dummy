@@ -1,10 +1,12 @@
 import React from 'react'
 import loading from '../../public/loading.gif'
-const Loading = () => {
+import {motion} from 'framer-motion'
+
+const Loading = ({state}) => {
   return (
-    <div>
-        <img src={loading} alt="" className='w-full h-screen'/>
-    </div>
+    <motion.div animate={state ? {opacity:1} : {opacity:0}} className='bg-black h-screen'>
+        <img src={loading} alt="" className='w-full h-full object-contain lg:h-screen'/>
+    </motion.div>
   )
 }
 

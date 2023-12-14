@@ -16,6 +16,7 @@ const Center = ({category}) => {
         const sortDateData = response?.data?.data?.sort((a, b) =>
           a.date < b.date ? 1 : -1
         );
+        
         setNews(sortDateData);
         setIsLoading(false);
         console.log(response?.data?.data);

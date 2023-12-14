@@ -56,7 +56,7 @@ const Navbar2 = () => {
     <motion.div
       variants={navbarVariants}
       animate={isScrolled ? "scrolled" : "notScrolled"}
-      className="sticky top-10 z-10 text-orange-600 dark:text-blue-600"
+      className="sticky top-10 z-40 text-orange-600 dark:text-blue-600"
     >
       <div className="flex gap-2 items-center p-5 justify-center">
         {navData.map((el) => {

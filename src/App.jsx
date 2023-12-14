@@ -3,16 +3,16 @@ import Navbar from "./components/Navbar";
 import Path from "./routes/Path";
 import ThemeBtn from "./components/ThemeBtn";
 import Loading from "./utils/Loading";
-import {motion} from 'framer-motion';
+import { AnimatePresence, motion } from "framer-motion";
 
 const loadingVarient = {
-  aniamte:{
-    opacity:1
+  aniamte: {
+    opacity: 1,
   },
-  initial:{
-    opacity:0
-  }
-}
+  initial: {
+    opacity: 0,
+  },
+};
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -46,11 +46,14 @@ const App = () => {
     setTimeout(() => setLoading(false), 3000);
   }, []);
 
-  if(loading){
-    return <Loading/>
+  if (loading) {
+    return <Loading state={loading}/>;
   }
   return (
-    <motion.div animate={{opacity:1}} initial={{opacity:0.5}} transition={{duration:1}} className={`bg-slate-200 font-sans`}>
+    <div
+      className={`bg-slate-200 font-sans`}
+    >
+      <motion.div animate={{opacity:0}} initial={{opacity:1}} transition={{duration:1}} className={`w-full h-screen bg-black absolute z-30`}></motion.div>
       {/* Light/Dark Theme Btn */}
       <ThemeBtn
         darkMode={darkMode}
@@ -59,7 +62,7 @@ const App = () => {
       />
       <Navbar />
       <Path />
-    </motion.div>
+    </div>
   );
 };
 
