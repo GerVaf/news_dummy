@@ -1,24 +1,25 @@
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import React, { useEffect, useState } from "react";
-import { IoChevronDownOutline } from "react-icons/io5";
 import { FaArrowCircleRight } from "react-icons/fa";
 import "@splidejs/react-splide/css";
 import "./custom.css";
 import { get } from "../../Global/api";
+import SelectProgram from "../../utils/SelectProgram";
 
 const Center = ({ category }) => {
-  const [show, setShow] = useState(false);
   const [news, setNews] = useState();
-  const [program, setProgram] = useState('International');
+  const [program, setProgram] = useState("International");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     try {
-      get(`/programs?category=${category}&programs=${program}`).then((response) => {
-        setNews(response?.data?.data);
-        // console.log(news)
-        setIsLoading(false);
-      });
+      get(`/programs?category=${category}&programs=${program}`).then(
+        (response) => {
+          setNews(response?.data?.data);
+          // console.log(news)
+          setIsLoading(false);
+        }
+      );
     } catch (error) {
       console.log(error);
     }
@@ -30,28 +31,7 @@ const Center = ({ category }) => {
   return (
     <div className="bg-bgColor rounded text-white flex flex-col items-start pb-8 gap-5">
       {/* Top */}
-      <div
-        className={`overflow-hidden transition-all border-b m-5 z-40 ${
-          show ? "h-[60px]" : "h-[30px] "
-        }`}
-      >
-        {/* DropDown */}
-        <div
-          onClick={(e) => {
-            e.stopPropagation();
-            setShow(!show);
-          }}
-          className="flex justify-between items-center gap-5 cursor-pointer"
-        >
-          <h1 onClick={() => setProgram("International")} className="uppercase">
-            International News
-          </h1>
-          <IoChevronDownOutline />
-        </div>
-        <h1 onClick={() => setProgram("Regional")} className="uppercase mt-2 cursor-pointer">
-          Regional News
-        </h1>
-      </div>
+      <SelectProgram program={program} setProgram={setProgram} />
       {/* SlideShow */}
       <Splide
         hasTrack={false}
