@@ -1,9 +1,11 @@
+import axios from "axios";
+import Cookies from "js-cookie";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -18,10 +20,23 @@ const Login = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-    nav("/dashboard");
+    try {
+      const response = await axios.post(
+        "https://api.dummy.opaqueindustries.news/auth",
+        formData
+      );
+      console.log(response);
+      if (response?.status === 200) {
+        Cookies
+        .set("token", response?.data?.data?.access_token);
+        nav("/dashboard");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -32,16 +47,16 @@ const Login = () => {
         className="flex flex-col gap-10 lg:w-[50%] p-5"
       >
         <div className="flex flex-col gap-2">
-          <label className="text-2xl" htmlFor="username">
-            Username
+          <label className="text-2xl" htmlFor="email">
+            Email
           </label>
           <input
             placeholder="Enter your name"
             className="input-form"
             type="text"
-            name="username"
-            id="username"
-            value={formData.username}
+            name="email"
+            id="email"
+            value={formData.email}
             onChange={handleChange}
             required
           />
