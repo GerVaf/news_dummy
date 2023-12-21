@@ -16,6 +16,12 @@ const HomeMenu = () => {
       <h1 className="text-2xl">Shop</h1>
       <h1 className="text-2xl">Radio</h1>
       <h1 className="text-2xl">Faq</h1>
+      <Link to={"/login"}>
+        <h1 className="text-2xl cursor-pointer">Login</h1>
+      </Link>
+      <Link to={"/sign-up"}>
+        <h1 className="text-2xl cursor-pointer">Sign Up</h1>
+      </Link>
     </div>
   );
 };

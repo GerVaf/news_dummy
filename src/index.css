@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,8 +7,8 @@
 /* .navMenu {
   @apply py-2 px-3 bg-gradient-to-r from-orange-600 to-pink-600;
 } */
-*{
-  font-family: 'Noto Sans Myanmar', 'Poppins', sans-serif
+* {
+  font-family: "Noto Sans Myanmar", "Poppins", sans-serif;
 }
 
 /* Contact */
@@ -24,10 +24,10 @@
   @apply bg-gradient-to-r from-orange-700 to-pink-700 dark:from-blue-600 dark:to-blue-400;
 }
 
-.logo{
+.logo {
   color: #fff;
-  text-shadow: 0 0 3px #a4a4a4, 0 0 3px #a4a4a4, 0 0 3px #a4a4a4, 0 0 3px #a4a4a4,
-    0 0 3px #a4a4a4, 0 0 3px #a4a4a4
+  text-shadow: 0 0 3px #a4a4a4, 0 0 3px #a4a4a4, 0 0 3px #a4a4a4,
+    0 0 3px #a4a4a4, 0 0 3px #a4a4a4, 0 0 3px #a4a4a4;
 }
 
 .navMenu {
@@ -79,4 +79,10 @@
   background-color: #d3d3d3;
   height: 50px;
   border-radius: 10px;
+}
+.input-form {
+  @apply outline-none border px-3 py-2 rounded;
+}
+.btn {
+  @apply text-white bg-red-600 rounded px-4 py-2 font-semibold;
 }

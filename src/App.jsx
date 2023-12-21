@@ -41,19 +41,22 @@ const App = () => {
     iconToggle();
   };
 
-  useEffect(() => {
-    ThemeCheck();
-    setTimeout(() => setLoading(false), 3000);
-  }, []);
+  // useEffect(() => {
+  //   ThemeCheck();
+  //   setTimeout(() => setLoading(false), 3000);
+  // }, []);
 
-  if (loading) {
-    return <Loading state={loading}/>;
-  }
+  // if (loading) {
+  //   return <Loading state={loading} />;
+  // }
   return (
-    <div
-      className={`bg-slate-200 font-sans`}
-    >
-      <motion.div animate={{opacity:0}} initial={{opacity:1}} transition={{duration:1}} className={`w-full h-screen bg-black absolute z-30`}></motion.div>
+    <div className={`bg-slate-200 font-sans`}>
+      <motion.div
+        animate={{ opacity: 0 }}
+        initial={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className={`w-full h-screen bg-black absolute z-30`}
+      ></motion.div>
       {/* Light/Dark Theme Btn */}
       <ThemeBtn
         darkMode={darkMode}
