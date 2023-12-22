@@ -1,8 +1,11 @@
 import React from 'react'
+import TextEditor from './TextEditor'
 
 const Create = () => {
   return (
-    <div>Create</div>
+    <div>
+      <TextEditor/>
+    </div>
   )
 }
 

@@ -54,13 +54,7 @@ const App = () => {
   //   return <Loading state={loading} />;
   // }
   return (
-    <div className={`font-sans`}>
-      <motion.div
-        animate={{ opacity: 0 }}
-        initial={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className={`w-full h-screen bg-black absolute z-30`}
-      ></motion.div>
+    <div className='font-sans'>
       {/* Light/Dark Theme Btn */}
       <ThemeBtn
         darkMode={darkMode}
@@ -68,7 +62,6 @@ const App = () => {
         themeSwitch={themeSwitch}
       />
       {!isDashboard && <Navbar />}
-
       <Path />
     </div>
   );
