@@ -4,6 +4,7 @@ import Path from "./routes/Path";
 import ThemeBtn from "./components/ThemeBtn";
 import Loading from "./utils/Loading";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const loadingVarient = {
   aniamte: {
@@ -41,6 +42,9 @@ const App = () => {
     iconToggle();
   };
 
+  const location = useLocation();
+  const isDashboard = location?.pathname?.includes("dashboard");
+
   // useEffect(() => {
   //   ThemeCheck();
   //   setTimeout(() => setLoading(false), 3000);
@@ -50,7 +54,7 @@ const App = () => {
   //   return <Loading state={loading} />;
   // }
   return (
-    <div className={`bg-slate-200 font-sans`}>
+    <div className={`font-sans`}>
       <motion.div
         animate={{ opacity: 0 }}
         initial={{ opacity: 1 }}
@@ -63,7 +67,8 @@ const App = () => {
         setDarkMode={setDarkMode}
         themeSwitch={themeSwitch}
       />
-      <Navbar />
+      {!isDashboard && <Navbar />}
+
       <Path />
     </div>
   );

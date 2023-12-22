@@ -6,7 +6,7 @@ const Menu = () => {
     {
       id: 1,
       path: "",
-      title: "Dashboard",
+      title: "Home",
     },
     {
       id: 2,
@@ -20,8 +20,8 @@ const Menu = () => {
     },
     {
       id: 4,
-      path: "noti",
-      title: "Notification",
+      path: "create",
+      title: "Create",
     },
   ];
   return (

@@ -15,6 +15,8 @@ import HistList from "../components/Admin/HistList";
 import Noti from "../components/Admin/Noti";
 import Dashboard from "../components/Admin/Dashboard";
 import Menu from "../components/Admin/MenuList/Menu";
+import Create from "../components/Admin/Create";
+import ListDetail from "../components/Admin/ListDetail";
 
 const Path = () => {
   const dashRoute = [
@@ -38,17 +40,30 @@ const Path = () => {
     },
     {
       id: 4,
-      title: "Notification",
-      path: "noti",
-      component: <Noti />,
+      title: "Create",
+      path: "create",
+      component: <Create />,
     },
+    {
+      id: 5,
+      title: "Detail",
+      path: "detail",
+      component: <ListDetail />,
+    },
+    // {
+    //   id: 6,
+    //   title: "Notification",
+    //   path: "noti",
+    //   component: <Noti />,
+    // },
   ];
   const location = useLocation();
   const isDashboard = location?.pathname?.includes("dashboard");
+  
   return (
     <div className={`${isDashboard && "flex w-12/12 "}`}>
       {isDashboard && <Menu />}
-      <div className={`${isDashboard && "flex w-8/12 "}`}>
+      <div className={`${isDashboard && "flex w-10/12 "}`}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/music" element={<Music />} />
@@ -63,7 +78,11 @@ const Path = () => {
 
           {dashRoute?.map((rou) => {
             return (
-              <Route path={`/dashboard/${rou.path}`} element={rou?.component} />
+              <Route
+                key={rou.id}
+                path={`/dashboard/${rou.path}`}
+                element={rou?.component}
+              />
             );
           })}
         </Routes>
