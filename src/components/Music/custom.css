@@ -1,0 +1,32 @@
+.custom-arrows {
+  width: 150px;
+  margin-top: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.splide__arrow {
+  background-color: transparent;
+  opacity: 1;
+}
+.splide__arrow svg {
+  fill: white;
+}
+.splide__pagination{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.splide__pagination__page{
+  background: rgb(117, 117, 117) !important;
+  width: 15px;
+  height: 4px;
+  border-radius: 10px;
+  transition: width ease-in-out 0.1s;
+}
+button.splide__pagination__page.is-active{
+  width: 35px;
+  transform: scale(1);
+  border-radius: 10px;
+  background: white !important;
+}
