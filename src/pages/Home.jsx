@@ -17,6 +17,13 @@ const Home = () => {
       <Shop />
       <WhoWeAre />
       <Advertise />
+      <div className="bg-bgColor h-[350px] my-5 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1701198067976-3c2b6bf5f5c1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
+          alt=""
+          className=""
+        />
+      </div>
       <AdvertiseWithUs />
       <Foot />
     </div>
