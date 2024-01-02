@@ -31,7 +31,7 @@
 }
 
 .navMenu {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   cursor: pointer;
   display: flex;
   padding: 0.8em 1.1em;
