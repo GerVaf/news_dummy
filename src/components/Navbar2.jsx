@@ -43,11 +43,6 @@ const Navbar2 = () => {
           id:3,
           title:'Business',
           link:'/business'
-        },
-        {
-          id:4,
-          title:'Detail',
-          link:'/detail'
         }
       ]
     }
