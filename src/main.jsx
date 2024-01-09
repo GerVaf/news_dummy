@@ -3,9 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-
 import "@mantine/core/styles.css";
-
 import { MantineProvider } from "@mantine/core";
 import { PersistGate } from "redux-persist/integration/react";
 import persistStore from "redux-persist/es/persistStore";

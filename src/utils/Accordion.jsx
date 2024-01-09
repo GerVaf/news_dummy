@@ -21,11 +21,6 @@ const navMenus = [
   },
   {
     id: 3,
-    title: "Services",
-    lists: main,
-  },
-  {
-    id: 4,
     title: "Tools",
     lists: tools,
   },

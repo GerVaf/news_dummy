@@ -7,6 +7,7 @@ const HomeMenu = () => {
     <div className="flex flex-col gap-2 text-white">
       <h1 className="navMenu">Home</h1>
       {/* Accordion */}
+      <Link to={'https://indxnews.net'} className="navMenu">Services</Link>
       <Accordion />
       <h1 className="text-2xl">Contact Us</h1>
       <h1 className="text-2xl">Products</h1>
